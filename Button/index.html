@@ -1,0 +1,23 @@
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+<p><button id="confirm" onclick="myFunction()">Press me</button> </p>
+
+<div id="buttonNotPressed">Button not pressed</div>
+
+<script>
+function myFunction() {
+  var x = document.getElementById("buttonNotPressed");
+  if (x.innerHTML === "Button not pressed") {
+    x.innerHTML = "Button Pressed";
+  } else {
+    x.innerHTML = "Button not pressed";
+  }
+}
+</script>
+
+</body>
+</html>
