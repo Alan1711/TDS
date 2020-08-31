@@ -45,15 +45,15 @@ To automate builds, trigger jenkins tests and manage releases.
 https://aerokube.com/selenoid/latest/
 
 ## In CI to automate your test, can you specify
-- when would you execute your tests?
+### - When would you execute your tests?
 I would set up a trigger to run any automation when a pull request is made against Master branch, before and after a deployment and in the case of multiple dev envoirenments run tests after master is merged back. The tests would also be available to run manually for the benefit of dev testing. 
 
-- how would you execute it?
+### - How would you execute it?
 Locally, using a simple terminal command. Tags would be attached to each test meaning the full suite would not have to be run on each occasion.
 
 Automatically, setup a jenkins job through Azure Devops to kick off tests ecah time a build is triggered. I would insert the automation job post build and pre deployment with a successful test run as a requirement to proceed. 
 
-- what kind of reporting/notifications would you use on
+### - What kind of reporting/notifications would you use on
  success/failure?
  I would set up a webhook to report the success/failure rate of tests to the team business communication platform (I currently use Slack).
  Robotframework creates a log.html file after each test run with screenshots also included upon failure. 
